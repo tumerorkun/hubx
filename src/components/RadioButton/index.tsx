@@ -1,4 +1,3 @@
-import { verticalScale, moderateScale, scale } from '@/utils/responsive';
 import {
   Canvas,
   Rect,
@@ -22,6 +21,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { ReactNode } from 'react';
 import { useTheme } from '@/styles/theme';
+import { verticalScale, moderateScale, scale } from '@/utils/responsive';
 
 type Props = {
   id: string;

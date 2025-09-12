@@ -1,6 +1,5 @@
 import Button from '@/components/Button';
 import { useDispatch, actions } from '@/store';
-import { persistantStorage } from '@/store/persistant';
 import { scale } from '@/utils/responsive';
 import { StyleSheet, View } from 'react-native';
 

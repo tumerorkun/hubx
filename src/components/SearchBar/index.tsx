@@ -1,7 +1,7 @@
-import { moderateScale, verticalScale, scale, width } from '@/utils/responsive';
 import { StyleSheet, TextInput, View } from 'react-native';
-import { SearchIcon } from '../Icons';
+import { SearchIcon } from '@/components/Icons';
 import { useTheme } from '@/styles/theme';
+import { moderateScale, verticalScale, scale } from '@/utils/responsive';
 
 export default function SearchBar() {
   const { colors } = useTheme();

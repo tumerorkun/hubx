@@ -1,10 +1,10 @@
+import { ImageBackground, StyleSheet, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Text } from '@/components/Text';
 import { scale, verticalScale } from '@/utils/responsive';
 import { useTheme } from '@/styles/theme';
-import { ImageBackground, StyleSheet, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Button from '@/components/Button';
-import { CommonActions, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function GetStarted() {
   const { top, bottom } = useSafeAreaInsets();

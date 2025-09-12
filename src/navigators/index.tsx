@@ -1,18 +1,18 @@
+import { ReactNode } from 'react';
+import { Image, StyleSheet, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
+import { useSelector } from '@/store';
+import { moderateScale, scale, verticalScale } from '@/utils/responsive';
 import GetStarted from '@/screens/GetStarted';
 import Onboarding from '@/screens/Onboarding';
 import Paywall from '@/screens/Paywall';
 import Home from '@/screens/Home';
 import Scan from '@/screens/Scan';
-import { useSelector } from '@/store';
-import type { HomeTabParamList, RootStackParamList } from './types';
-import { Image, StyleSheet, View } from 'react-native';
-import { Text } from '@/components/Text';
-import { moderateScale, scale, verticalScale } from '@/utils/responsive';
 import { useTheme } from '@/styles/theme';
-import { ReactNode } from 'react';
 import * as ICONS from '@/components/Icons';
+import { Text } from '@/components/Text';
+import type { HomeTabParamList, RootStackParamList } from './types';
 
 export const RootStack = createStackNavigator<RootStackParamList>();
 export const BottomTab = createBottomTabNavigator<HomeTabParamList>();

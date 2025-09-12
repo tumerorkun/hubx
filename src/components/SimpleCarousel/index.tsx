@@ -21,7 +21,6 @@ import Animated, {
   useAnimatedScrollHandler,
   useAnimatedStyle,
   useSharedValue,
-  makeMutable,
 } from 'react-native-reanimated';
 
 type Context = {

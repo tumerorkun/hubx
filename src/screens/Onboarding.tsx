@@ -18,7 +18,7 @@ import SimpleCarouselProvider, {
   SimpleCarouselDots,
   useSimpleCarousel,
 } from '@/components/SimpleCarousel';
-import { CommonActions, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Onboarding() {
   return (

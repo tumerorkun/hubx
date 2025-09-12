@@ -1,6 +1,6 @@
 import { Category } from '@/apis/types';
-import { moderateScale, scale, width } from '@/utils/responsive';
-import { ImageBackground, Pressable, StyleSheet, View } from 'react-native';
+import { moderateScale, scale } from '@/utils/responsive';
+import { ImageBackground, Pressable, StyleSheet } from 'react-native';
 import { Text } from '@/components/Text';
 import { useTheme } from '@/styles/theme';
 

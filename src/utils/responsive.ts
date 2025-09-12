@@ -1,4 +1,4 @@
-import { Dimensions, PixelRatio, Platform } from 'react-native';
+import { Dimensions, PixelRatio } from 'react-native';
 import { GUIDELINE_BASE_WIDTH, GUIDELINE_BASE_HEIGHT } from '@/_constants';
 
 export const { width, height } = Dimensions.get('window');

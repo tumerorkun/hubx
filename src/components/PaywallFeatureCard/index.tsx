@@ -1,8 +1,7 @@
-import { moderateScale, scale, verticalScale } from '@/utils/responsive';
 import { ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Text } from '../Text';
 import { useTheme } from '@/styles/theme';
+import { moderateScale, scale, verticalScale } from '@/utils/responsive';
 
 type Props = {
   icon?: ReactNode;
