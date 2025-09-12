@@ -30,7 +30,7 @@ export default function CategoryCard({ data }: Props) {
 
 const styles = StyleSheet.create({
   container: {
-    width: scale(158),
+    flex: 1,
     height: scale(152),
     overflow: 'hidden',
   },
