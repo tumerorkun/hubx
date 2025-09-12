@@ -1,3 +1,10 @@
+HubX Case - PlantApp
+
+[iOS](https://github.com/user-attachments/assets/42aad4a1-ac78-4f25-95cc-627762ef3fad)
+
+[Android](https://github.com/user-attachments/assets/a9e08a94-a24c-4561-b15a-04742ecdc719)
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
