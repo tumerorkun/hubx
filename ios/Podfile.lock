@@ -1863,7 +1863,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - react-native-skia (2.2.13):
+  - react-native-skia (2.2.14):
     - boost
     - DoubleConversion
     - fast_float
@@ -3053,7 +3053,7 @@ SPEC CHECKSUMS:
   React-microtasksnativemodule: 1ead4fe154df3b1ba34b5a9e35ef3c4bdfa72ccb
   react-native-mmkv: a46b0a6df32c179997628085b3a5e0f3386d4053
   react-native-safe-area-context: c6e2edd1c1da07bdce287fa9d9e60c5f7b514616
-  react-native-skia: 394778b2ed451a16588678834beffaa893e1d1ba
+  react-native-skia: 5bf2b2107cd7f2d806fd364f5e16b1c7554ed3cd
   React-NativeModulesApple: eff2eba56030eb0d107b1642b8f853bc36a833ac
   React-oscompat: b12c633e9c00f1f99467b1e0e0b8038895dae436
   React-perflogger: 58d12c4e5df1403030c97b9c621375c312cca454

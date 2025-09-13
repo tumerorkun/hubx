@@ -42,7 +42,6 @@ export const HomeTabNavigation = () => {
   return (
     <BottomTab.Navigator
       initialRouteName="Home"
-      detachInactiveScreens={false}
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
