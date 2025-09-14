@@ -1,13 +1,6 @@
-import React, { useState, PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { StyleSheet, View, ViewProps } from 'react-native';
-import Animated, {
-  useAnimatedStyle,
-  withRepeat,
-  withSequence,
-  withTiming,
-  Easing,
-  withDelay,
-} from 'react-native-reanimated';
+import Animated from 'react-native-reanimated';
 
 type Props = {
   loopDuration: number; // seconds
@@ -19,81 +12,39 @@ export function InfiniteCarousel({
   loopDuration,
   children,
 }: PropsWithChildren<Props>) {
-  const [contentWidth, setContentWidth] = useState(0);
-
-  const mainGroupStyles = useAnimatedStyle(() => ({
-    transform: [
-      {
-        translateX: withDelay(
-          1000,
-          withRepeat(
-            withSequence(
-              withTiming(0, {
-                easing: Easing.linear,
-                duration: 0,
-              }),
-              withTiming(-contentWidth, {
-                easing: Easing.linear,
-                duration: loopDuration * 1000,
-              }),
-              withTiming(contentWidth, {
-                duration: 0,
-                easing: Easing.linear,
-              }),
-              withTiming(0, {
-                duration: loopDuration * 1000,
-                easing: Easing.linear,
-              }),
-            ),
-            -1,
-          ),
-        ),
-      },
-    ],
-  }));
-
-  const copyGroupStyles = useAnimatedStyle(() => ({
-    transform: [
-      {
-        translateX: withDelay(
-          1000,
-          withRepeat(
-            withSequence(
-              withTiming(contentWidth, {
-                duration: 0,
-                easing: Easing.linear,
-              }),
-              withTiming(0, {
-                duration: loopDuration * 1000,
-                easing: Easing.linear,
-              }),
-              withTiming(-contentWidth, {
-                duration: loopDuration * 1000,
-                easing: Easing.linear,
-              }),
-              withTiming(contentWidth, {
-                duration: 0,
-                easing: Easing.linear,
-              }),
-            ),
-            -1,
-          ),
-        ),
-      },
-    ],
-  }));
-
   return (
     <View style={[style, styles.row]}>
       <Animated.View
-        onLayout={({ nativeEvent: { layout } }) =>
-          setContentWidth(layout.width)
-        }
-        style={[styles.row, mainGroupStyles]}
+        style={[
+          styles.row,
+          {
+            animationName: {
+              from: { transform: [{ translateX: 0 }] },
+              to: { transform: [{ translateX: '-100%' }] },
+            },
+            animationDuration: `${loopDuration}s`,
+            animationIterationCount: 'infinite',
+            animationTimingFunction: 'linear',
+          },
+        ]}
       >
         {children}
       </Animated.View>
-      <Animated.View style={[styles.row, styles.absolute, copyGroupStyles]}>
+      <Animated.View
+        style={[
+          styles.row,
+          styles.absolute,
+          {
+            animationName: {
+              from: { transform: [{ translateX: '100%' }] },
+              to: { transform: [{ translateX: 0 }] },
+            },
+            animationDuration: `${loopDuration}s`,
+            animationIterationCount: 'infinite',
+            animationTimingFunction: 'linear',
+          },
+        ]}
+      >
         {children}
       </Animated.View>
     </View>
